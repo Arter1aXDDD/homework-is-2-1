@@ -1,10 +1,26 @@
+const list = {
+    basketball: {
+        name: "PinkUnicorns", 
+        participants: {
+            emp1: "Kazuya",
+            emp2: "Jin",                
+            emp3: "Heihachi",
+            }
+    },
+    volleyball: {
+        name: "RibbyFrogs",
+        participants: {
+            emp1: "Lars",
+            emp2: "Lee",
+            emp3: "Jinpachi",
+            }
+    }
+};
 
-const list_2 = [{name:'Alexey', surname:'Boston', duty:'любит'}, {name:'Dmitry', surname: 'Zalozny', duty: 'любит'}]
-
-for (let item of list_2) {
-    console.log(`${item.name} ${item.surname} ${item.duty} заведовать пабликом`)
-    console.log('А также')
-    item.duty = 'не любит'
-    console.log(`${item.name} ${item.surname} ${item.duty} флудить в чате`)
-    console.log(' ')
+for (let i in list) {
+    console.log(`Команда ${list[i].name}, участники:`)
+    for (let j in list[i].participants) {
+        console.log(list[i].participants[j])
+    }
+    console.log(" ")
 }
